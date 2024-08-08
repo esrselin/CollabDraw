@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    #draw-canvas {
+        background-color: #ddd;
+    }
+</style>
+
+<div>
+    <input type="color" id="color" value="#000000" />
+    <input type="button" id="clear" value="Clear" />
+</div>
+
+<div class="container">
+    <div class="col-1">Online Users:</div>
+    <div class="col-3"><span id="usersOnline"</div>
+</div>
+
+
+<div>
+    <canvas id="draw-canvas" height="500" width="800"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<script src="~/js/draw.js"></script>
+<script src="~/js/UsersOnline.js"></script>
